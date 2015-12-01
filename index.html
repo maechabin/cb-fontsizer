@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+<p><span class="aaa">ああああああああああ</span></p>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!--<script src="./dist/cb-fontsizer.js"></script>-->
+<script>
+var firstSize = "100px";
+var LastSize = "10px";
+var persent = "100%";
+var aaa = $(".aaa");
+var text = aaa.text().split("");
+
+aaa.text("");
+aaa.css({
+  "font-size": firstSize
+});
+
+jQuery.each(text, function () {
+  var $this = $(this);
+  var span = $("<span>").text($this[0]).css({
+    "font-size": "100%"
+  });
+  aaa.append(span);
+});
+
+function foo(a) {
+  var f = a.firstSize;
+  var l = a.lastSize;
+  var c = a.count;
+}
+
+
+</script>
+</body>
+
+</html>
